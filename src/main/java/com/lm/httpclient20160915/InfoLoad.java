@@ -426,58 +426,30 @@ public class InfoLoad {
      */  
     @SuppressWarnings("static-access")
 	public static void main(String[] args) { 
-//    	String[] urisToGet = {
-//    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=11",
-//    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=22",
-//    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=333",
-//    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=444"
-//    			};
-//    	
-//    	for (int i=0;i<10;i++) {
-//    		Random random=new Random();
-//    		String string=urisToGet[random.nextInt(3)];
-//			Thread thread=new Thread(new Runnable() {
-//				@Override
-//				public void run() {
-//					System.out.println(string);
-//					InfoLoad.getInfoLoadInstance().loadForString(string, 0); 
-//				}
-//			});
-//			thread.start();
-//		}
+    	String[] urisToGet = {
+    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=11",
+    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=22",
+    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=333",
+    			"http://10.165.124.24:8210/sd/service/query?index=beauty_product&stype=1&abtest=0_unknown&q=444"
+    			};
+    	
+    	for (int i=0;i<10;i++) {
+    		Random random=new Random();
+    		String string=urisToGet[random.nextInt(3)];
+			Thread thread=new Thread(new Runnable() {
+				@Override
+				public void run() {
+					System.out.println(string);
+					InfoLoad.getInfoLoadInstance().loadForString(string, 0); 
+				}
+			});
+			thread.start();
+		}
 
         InfoLoad.getInfoLoadInstance().loadForString("https://www.baidu.com", 0);  
     }  
   
     
-    static class GetThread extends Thread {
-
-    	private final CloseableHttpClient httpClient;
-    	private final HttpContext context;
-    	private final HttpGet httpget;
-
-    	public GetThread(CloseableHttpClient httpClient, HttpGet httpget) {
-    	this.httpClient = httpClient;
-    	this.context = HttpClientContext.create();
-    	this.httpget = httpget;
-    	}
-
-    	@Override
-    	public void run() {
-    	try {
-	    	CloseableHttpResponse response = httpClient.execute(
-	    	httpget, context);
-	    	try {
-	    	HttpEntity entity = response.getEntity();
-	    	} finally {
-	    	response.close();
-	    	}
-	    	} catch (ClientProtocolException ex) {
-	    	// Handle protocol errors
-	    	} catch (IOException ex) {
-	    	// Handle I/O errors
-	    	}
-    	}
-    }
+    
 }  
   
