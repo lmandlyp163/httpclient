@@ -34,7 +34,7 @@ package org.apache.http.client.cache;
  * context under the key
  * {@link org.apache.http.impl.client.cache.CachingHttpClient#CACHE_RESPONSE_STATUS}.
  */
-public enum CacheResponseStatus {
+public enum CacheResponseStatus {//
 
     /** The response was generated directly by the caching module. */
     CACHE_MODULE_RESPONSE,
