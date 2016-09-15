@@ -1,0 +1,12 @@
+Apache HttpComponents Client
+Copyright 1999-2016 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+
+##############################
+https://github.com/apache/httpclient/blob/52c68d6a4f1a14e88f9817270580bb384138040d/httpclient5/src/main/java/org/apache/hc/client5/http/impl/sync/CloseableHttpClient.javawith 2 child class:
+https://github.com/apache/httpclient/blob/52c68d6a4f1a14e88f9817270580bb384138040d/httpclient5/src/main/java/org/apache/hc/client5/http/impl/sync/MinimalHttpClient.java
+AND
+https://github.com/apache/httpclient/blob/52c68d6a4f1a14e88f9817270580bb384138040d/httpclient5/src/main/java/org/apache/hc/client5/http/impl/sync/InternalHttpClient.java
