@@ -1,9 +1,4 @@
-bin
-.classpath
-.project
-.settings
-.clover
-.externalToolBuilders
-target
-.idea
+.idea/
 *.iml
+
+target/
